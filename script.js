@@ -3,6 +3,10 @@ const menu = document.querySelector("[data-menu]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const contactForm = document.querySelector("[data-contact-form]");
 const formNote = document.querySelector("[data-form-note]");
+const railLinks = document.querySelectorAll("[data-rail-link]");
+const workItems = Array.from(document.querySelectorAll(".work-item"));
+const workToggle = document.querySelector("[data-work-toggle]");
+const workInitialCount = 12;
 const revealTargets = document.querySelectorAll(
   ".section, .intro-band, .expertise-band, .service-card, .expertise-grid article, .logo-tile, .project-card, .work-item"
 );
@@ -35,6 +39,29 @@ if ("IntersectionObserver" in window) {
   revealTargets.forEach((target) => target.classList.add("is-visible"));
 }
 
+if ("IntersectionObserver" in window && railLinks.length > 0) {
+  const sectionTargets = railLinks
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+        const currentId = `#${entry.target.id}`;
+        railLinks.forEach((link) => {
+          link.classList.toggle("is-active", link.getAttribute("href") === currentId);
+        });
+      });
+    },
+    { threshold: 0.45 }
+  );
+
+  sectionTargets.forEach((section) => sectionObserver.observe(section));
+}
+
 menuToggle.addEventListener("click", () => {
   const isOpen = menu.classList.toggle("is-open");
   header.classList.toggle("is-open", isOpen);
@@ -48,6 +75,30 @@ menu.addEventListener("click", (event) => {
     menuToggle.setAttribute("aria-expanded", "false");
   }
 });
+
+if (workItems.length > workInitialCount && workToggle) {
+  workItems.forEach((item, index) => {
+    if (index >= workInitialCount) {
+      item.classList.add("is-collapsed");
+    }
+  });
+
+  workToggle.addEventListener("click", () => {
+    const isExpanded = workToggle.getAttribute("aria-expanded") === "true";
+    const nextExpanded = !isExpanded;
+
+    workItems.forEach((item, index) => {
+      if (index >= workInitialCount) {
+        item.classList.toggle("is-collapsed", !nextExpanded);
+      }
+    });
+
+    workToggle.setAttribute("aria-expanded", String(nextExpanded));
+    workToggle.textContent = nextExpanded ? "Show less work" : "Show all work";
+  });
+} else if (workToggle) {
+  workToggle.style.display = "none";
+}
 
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
