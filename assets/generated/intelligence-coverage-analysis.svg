@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="Coverage analysis dashboard illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#102336"/>
+      <stop offset="100%" stop-color="#1c3e5a"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#74e8dc"/>
+      <stop offset="100%" stop-color="#44a8ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <rect x="80" y="70" width="1040" height="620" rx="22" fill="#0f2438" fill-opacity="0.62" stroke="#9dece3" stroke-opacity="0.24"/>
+  <rect x="130" y="120" width="460" height="230" rx="16" fill="#16354f"/>
+  <rect x="610" y="120" width="460" height="230" rx="16" fill="#13314a"/>
+  <rect x="130" y="380" width="940" height="260" rx="16" fill="#16354f"/>
+  <g fill="#d6fffb" fill-opacity="0.75">
+    <rect x="170" y="158" width="220" height="12" rx="6"/>
+    <rect x="170" y="185" width="170" height="12" rx="6"/>
+    <rect x="650" y="158" width="190" height="12" rx="6"/>
+    <rect x="650" y="185" width="250" height="12" rx="6"/>
+  </g>
+  <g>
+    <rect x="170" y="258" width="52" height="58" rx="10" fill="url(#bar)"/>
+    <rect x="236" y="228" width="52" height="88" rx="10" fill="url(#bar)"/>
+    <rect x="302" y="198" width="52" height="118" rx="10" fill="url(#bar)"/>
+    <rect x="368" y="240" width="52" height="76" rx="10" fill="url(#bar)"/>
+    <rect x="434" y="214" width="52" height="102" rx="10" fill="url(#bar)"/>
+  </g>
+  <polyline points="650,292 725,238 790,255 860,208 935,228 1020,174" fill="none" stroke="#74e8dc" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#74e8dc">
+    <circle cx="725" cy="238" r="8"/>
+    <circle cx="790" cy="255" r="8"/>
+    <circle cx="860" cy="208" r="8"/>
+    <circle cx="935" cy="228" r="8"/>
+    <circle cx="1020" cy="174" r="8"/>
+  </g>
+  <g fill="#d6fffb" fill-opacity="0.76">
+    <rect x="170" y="426" width="300" height="14" rx="7"/>
+    <rect x="170" y="456" width="230" height="14" rx="7"/>
+    <rect x="170" y="500" width="860" height="10" rx="5"/>
+    <rect x="170" y="524" width="790" height="10" rx="5"/>
+    <rect x="170" y="548" width="700" height="10" rx="5"/>
+    <rect x="170" y="572" width="820" height="10" rx="5"/>
+  </g>
+</svg>

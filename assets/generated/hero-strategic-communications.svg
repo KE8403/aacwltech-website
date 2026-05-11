@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Abstract strategic communications scene">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1828"/>
+      <stop offset="55%" stop-color="#102338"/>
+      <stop offset="100%" stop-color="#1a3a55"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e6db0" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#31c1b7" stop-opacity="0.22"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#31c1b7" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#8de4e2" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#31c1b7" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1300" cy="180" r="320" fill="#2a74aa" fill-opacity="0.2"/>
+  <circle cx="260" cy="740" r="260" fill="#1d8f9e" fill-opacity="0.18"/>
+  <rect x="132" y="150" width="1336" height="600" rx="24" fill="url(#panel)" stroke="#8de4e2" stroke-opacity="0.25"/>
+  <g stroke="url(#line)" stroke-width="4" fill="none">
+    <path d="M180 610 C280 530 330 550 430 470 C530 390 620 420 720 350 C810 290 910 320 1030 250 C1140 190 1280 230 1420 170"/>
+    <path d="M180 670 C290 630 360 640 470 600 C610 550 690 570 820 520 C980 460 1100 470 1420 400"/>
+    <path d="M180 730 C270 700 390 710 500 680 C620 650 760 650 890 610 C1040 560 1210 560 1420 520"/>
+  </g>
+  <g fill="#8de4e2">
+    <circle cx="430" cy="470" r="8"/>
+    <circle cx="720" cy="350" r="8"/>
+    <circle cx="1030" cy="250" r="8"/>
+    <circle cx="1280" cy="230" r="8"/>
+    <circle cx="470" cy="600" r="7"/>
+    <circle cx="820" cy="520" r="7"/>
+    <circle cx="1100" cy="470" r="7"/>
+    <circle cx="500" cy="680" r="7"/>
+    <circle cx="890" cy="610" r="7"/>
+    <circle cx="1210" cy="560" r="7"/>
+  </g>
+  <g opacity="0.38" stroke="#d4fcfb" stroke-opacity="0.45">
+    <rect x="220" y="220" width="280" height="150" rx="16" fill="none"/>
+    <rect x="560" y="220" width="280" height="150" rx="16" fill="none"/>
+    <rect x="900" y="220" width="460" height="150" rx="16" fill="none"/>
+    <rect x="260" y="430" width="420" height="110" rx="14" fill="none"/>
+    <rect x="740" y="430" width="580" height="110" rx="14" fill="none"/>
+  </g>
+</svg>

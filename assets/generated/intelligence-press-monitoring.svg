@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="Press monitoring illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#12263a"/>
+      <stop offset="100%" stop-color="#1b3f5d"/>
+    </linearGradient>
+    <linearGradient id="sheet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d8fffb" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#afe7ff" stop-opacity="0.86"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <rect x="90" y="80" width="1020" height="600" rx="24" fill="#10273e" fill-opacity="0.62" stroke="#9dece3" stroke-opacity="0.28"/>
+  <g transform="translate(200 150)">
+    <rect x="0" y="0" width="760" height="450" rx="20" fill="url(#sheet)"/>
+    <rect x="36" y="40" width="280" height="180" rx="12" fill="#1d4466"/>
+    <rect x="340" y="40" width="380" height="16" rx="8" fill="#225078"/>
+    <rect x="340" y="72" width="300" height="14" rx="7" fill="#2a648f"/>
+    <rect x="340" y="100" width="340" height="14" rx="7" fill="#2a648f"/>
+    <rect x="340" y="128" width="270" height="14" rx="7" fill="#2a648f"/>
+    <rect x="36" y="250" width="684" height="12" rx="6" fill="#2a648f"/>
+    <rect x="36" y="274" width="650" height="12" rx="6" fill="#2a648f"/>
+    <rect x="36" y="298" width="700" height="12" rx="6" fill="#2a648f"/>
+    <rect x="36" y="322" width="620" height="12" rx="6" fill="#2a648f"/>
+    <rect x="36" y="346" width="668" height="12" rx="6" fill="#2a648f"/>
+  </g>
+  <g transform="translate(770 360)">
+    <circle cx="120" cy="120" r="112" fill="#74e8dc" fill-opacity="0.24" stroke="#b6fff5" stroke-width="12"/>
+    <circle cx="120" cy="120" r="48" fill="none" stroke="#b6fff5" stroke-width="10"/>
+    <line x1="186" y1="186" x2="248" y2="248" stroke="#b6fff5" stroke-width="16" stroke-linecap="round"/>
+  </g>
+</svg>
