@@ -4,7 +4,7 @@ const menuToggle = document.querySelector("[data-menu-toggle]");
 const contactForm = document.querySelector("[data-contact-form]");
 const formNote = document.querySelector("[data-form-note]");
 const revealTargets = document.querySelectorAll(
-  ".section, .intro-band, .service-card, .logo-tile, .project-card, .work-item"
+  ".section, .intro-band, .expertise-band, .service-card, .expertise-grid article, .logo-tile, .project-card, .work-item"
 );
 
 function updateHeader() {
