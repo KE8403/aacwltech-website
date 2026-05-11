@@ -84,6 +84,7 @@ textarea {
 
 .topbar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   gap: 22px;
   padding: 9px clamp(18px, 4vw, 52px);
@@ -253,6 +254,11 @@ h2,
 h3,
 p {
   margin-top: 0;
+}
+
+h1,
+h2 {
+  text-wrap: balance;
 }
 
 h1 {
@@ -1150,6 +1156,12 @@ h3 {
 }
 
 @media (max-width: 640px) {
+  .section,
+  .intro-band {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   .brand img {
     width: 44px;
     height: 44px;
@@ -1164,12 +1176,19 @@ h3 {
   }
 
   .hero {
+    padding-top: 112px;
     padding-left: 16px;
     padding-right: 16px;
   }
 
   h1 {
-    font-size: 52px;
+    font-size: 44px;
+    line-height: 0.96;
+  }
+
+  .hero-copy {
+    font-size: 17px;
+    line-height: 1.55;
   }
 
   .hero-actions,
@@ -1185,6 +1204,16 @@ h3 {
 
   .work-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .work-item,
+  .work-item img {
+    min-height: 240px;
+  }
+
+  .project-card.large,
+  .project-card {
+    min-height: 320px;
   }
 
   .expertise-grid article {
