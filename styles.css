@@ -157,12 +157,27 @@ textarea {
 }
 
 .nav-links a {
+  position: relative;
   color: rgba(255, 255, 255, 0.96);
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
   color: var(--gold);
+}
+
+.nav-links a[aria-current="page"] {
+  color: var(--gold-soft);
+}
+
+.nav-links a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 2px;
+  background: var(--gold);
 }
 
 .menu-toggle {
@@ -217,15 +232,9 @@ textarea {
   object-fit: cover;
   opacity: 0;
   transform: scale(1.05) translate3d(0, 0, 0);
-  filter: saturate(0.96) contrast(1.14) brightness(0.86);
+  filter: saturate(1) contrast(1.1) brightness(0.84);
   animation: heroScene 28s infinite;
   will-change: opacity, transform;
-}
-
-.hero-stage-static .hero-scene {
-  animation: none;
-  opacity: 1;
-  transform: scale(1.04) translate3d(0, 0, 0);
 }
 
 .hero-scene:nth-child(2) {
