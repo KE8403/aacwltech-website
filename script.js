@@ -3,15 +3,17 @@ const menu = document.querySelector("[data-menu]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const contactForm = document.querySelector("[data-contact-form]");
 const formNote = document.querySelector("[data-form-note]");
-const railLinks = document.querySelectorAll("[data-rail-link]");
 const workItems = Array.from(document.querySelectorAll(".work-item"));
 const workToggle = document.querySelector("[data-work-toggle]");
 const workInitialCount = 12;
 const revealTargets = document.querySelectorAll(
-  ".section, .intro-band, .expertise-band, .service-card, .expertise-grid article, .logo-tile, .project-card, .work-item"
+  ".section, .intro-band, .chapter-intro, .expertise-band, .service-card, .expertise-grid article, .logo-tile, .project-card, .work-item"
 );
 
 function updateHeader() {
+  if (!header) {
+    return;
+  }
   header.classList.toggle("is-scrolled", window.scrollY > 12);
 }
 
@@ -39,42 +41,21 @@ if ("IntersectionObserver" in window) {
   revealTargets.forEach((target) => target.classList.add("is-visible"));
 }
 
-if ("IntersectionObserver" in window && railLinks.length > 0) {
-  const sectionTargets = railLinks
-    .map((link) => document.querySelector(link.getAttribute("href")))
-    .filter(Boolean);
+if (menuToggle && menu && header) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menu.classList.toggle("is-open");
+    header.classList.toggle("is-open", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
 
-  const sectionObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
-        const currentId = `#${entry.target.id}`;
-        railLinks.forEach((link) => {
-          link.classList.toggle("is-active", link.getAttribute("href") === currentId);
-        });
-      });
-    },
-    { threshold: 0.45 }
-  );
-
-  sectionTargets.forEach((section) => sectionObserver.observe(section));
+  menu.addEventListener("click", (event) => {
+    if (event.target.matches("a")) {
+      menu.classList.remove("is-open");
+      header.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }
+  });
 }
-
-menuToggle.addEventListener("click", () => {
-  const isOpen = menu.classList.toggle("is-open");
-  header.classList.toggle("is-open", isOpen);
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-});
-
-menu.addEventListener("click", (event) => {
-  if (event.target.matches("a")) {
-    menu.classList.remove("is-open");
-    header.classList.remove("is-open");
-    menuToggle.setAttribute("aria-expanded", "false");
-  }
-});
 
 if (workItems.length > workInitialCount && workToggle) {
   workItems.forEach((item, index) => {
@@ -100,15 +81,17 @@ if (workItems.length > workInitialCount && workToggle) {
   workToggle.style.display = "none";
 }
 
-contactForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const data = new FormData(contactForm);
-  const name = data.get("name").trim();
-  const email = data.get("email").trim();
-  const message = data.get("message").trim();
-  const subject = encodeURIComponent(`Project enquiry from ${name}`);
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+if (contactForm && formNote) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(contactForm);
+    const name = String(data.get("name") || "").trim();
+    const email = String(data.get("email") || "").trim();
+    const message = String(data.get("message") || "").trim();
+    const subject = encodeURIComponent(`Project enquiry from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
 
-  window.location.href = `mailto:aacwltech@gmail.com?subject=${subject}&body=${body}`;
-  formNote.textContent = "Your email app is ready with the message.";
-});
+    window.location.href = `mailto:aacwltech@gmail.com?subject=${subject}&body=${body}`;
+    formNote.textContent = "Your email app is ready with the message.";
+  });
+}
