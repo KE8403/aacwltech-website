@@ -6,6 +6,7 @@ const formNote = document.querySelector("[data-form-note]");
 const workItems = Array.from(document.querySelectorAll(".work-item"));
 const workToggle = document.querySelector("[data-work-toggle]");
 const workInitialCount = 12;
+const pageTransitionMs = 200;
 const revealTargets = document.querySelectorAll(
   ".section, .intro-band, .chapter-intro, .expertise-band, .service-card, .expertise-grid article, .logo-tile, .project-card, .work-item"
 );
@@ -19,6 +20,16 @@ function updateHeader() {
 
 updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
+
+if (window.requestAnimationFrame) {
+  document.body.classList.add("is-page-entering");
+  window.requestAnimationFrame(() => {
+    document.body.classList.add("is-page-entered");
+    window.setTimeout(() => {
+      document.body.classList.remove("is-page-entering");
+    }, pageTransitionMs + 40);
+  });
+}
 
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
@@ -95,3 +106,67 @@ if (contactForm && formNote) {
     formNote.textContent = "Your email app is ready with the message.";
   });
 }
+
+function isPageTransitionLink(anchor, event) {
+  if (
+    event.defaultPrevented ||
+    event.button !== 0 ||
+    event.metaKey ||
+    event.ctrlKey ||
+    event.shiftKey ||
+    event.altKey
+  ) {
+    return false;
+  }
+
+  if (anchor.target && anchor.target !== "_self") {
+    return false;
+  }
+
+  if (anchor.hasAttribute("download")) {
+    return false;
+  }
+
+  const rawHref = anchor.getAttribute("href");
+  if (
+    !rawHref ||
+    rawHref.startsWith("#") ||
+    rawHref.startsWith("mailto:") ||
+    rawHref.startsWith("tel:") ||
+    rawHref.startsWith("javascript:")
+  ) {
+    return false;
+  }
+
+  let destination;
+  try {
+    destination = new URL(anchor.href, window.location.href);
+  } catch {
+    return false;
+  }
+
+  const current = new URL(window.location.href);
+  if (destination.origin !== current.origin) {
+    return false;
+  }
+
+  const isSameDocument =
+    destination.pathname === current.pathname &&
+    destination.search === current.search;
+
+  return !isSameDocument;
+}
+
+document.addEventListener("click", (event) => {
+  const anchor = event.target.closest("a[href]");
+  if (!anchor || !isPageTransitionLink(anchor, event)) {
+    return;
+  }
+
+  event.preventDefault();
+  document.body.classList.add("is-page-leaving");
+
+  window.setTimeout(() => {
+    window.location.href = anchor.href;
+  }, pageTransitionMs);
+});

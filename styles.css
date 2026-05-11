@@ -35,6 +35,22 @@ body {
   line-height: 1.5;
 }
 
+.site-header,
+main,
+.site-footer {
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+body.is-page-entering .site-header,
+body.is-page-entering main,
+body.is-page-entering .site-footer,
+body.is-page-leaving .site-header,
+body.is-page-leaving main,
+body.is-page-leaving .site-footer {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -1074,7 +1090,10 @@ h3 {
   .hero::after,
   .command-centre::after,
   .signal-grid span,
-  .reveal {
+  .reveal,
+  .site-header,
+  main,
+  .site-footer {
     animation: none;
     transition: none;
   }
