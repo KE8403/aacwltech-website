@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Premium media production camera scene">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060b13"/>
+      <stop offset="45%" stop-color="#0d1826"/>
+      <stop offset="100%" stop-color="#172b43"/>
+    </linearGradient>
+    <radialGradient id="keyGlow" cx="0.24" cy="0.26" r="0.5">
+      <stop offset="0%" stop-color="#7de9e3" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#7de9e3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rimGlow" cx="0.82" cy="0.32" r="0.56">
+      <stop offset="0%" stop-color="#5ea5ff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#5ea5ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a2532"/>
+      <stop offset="50%" stop-color="#2a3a4a"/>
+      <stop offset="100%" stop-color="#121d28"/>
+    </linearGradient>
+    <linearGradient id="metalDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#121b26"/>
+      <stop offset="100%" stop-color="#0b121a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6fe8e1"/>
+      <stop offset="100%" stop-color="#6fb5ff"/>
+    </linearGradient>
+    <radialGradient id="lensGlass" cx="0.45" cy="0.35" r="0.65">
+      <stop offset="0%" stop-color="#8ff7f4" stop-opacity="0.85"/>
+      <stop offset="45%" stop-color="#4e8dcb" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0d1824" stop-opacity="0.96"/>
+    </radialGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1622" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#060b13" stop-opacity="0.94"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#keyGlow)"/>
+  <rect width="1920" height="1080" fill="url(#rimGlow)"/>
+
+  <g opacity="0.2" stroke="#8ad8ff" stroke-width="2">
+    <path d="M120 890 Q520 740 980 780 T1800 690" fill="none"/>
+    <path d="M120 940 Q560 790 980 840 T1800 760" fill="none"/>
+    <path d="M120 1000 Q560 860 980 910 T1800 840" fill="none"/>
+  </g>
+
+  <g transform="translate(860 255)">
+    <ellipse cx="370" cy="480" rx="520" ry="130" fill="#0a121b" opacity="0.75"/>
+
+    <rect x="80" y="170" width="760" height="360" rx="36" fill="url(#metal)"/>
+    <rect x="120" y="210" width="300" height="190" rx="22" fill="#1f2f3d"/>
+    <rect x="150" y="240" width="240" height="130" rx="14" fill="#0f1924"/>
+    <rect x="170" y="258" width="200" height="10" rx="5" fill="#7de9e3" opacity="0.45"/>
+    <rect x="170" y="284" width="160" height="8" rx="4" fill="#7de9e3" opacity="0.35"/>
+    <rect x="170" y="304" width="180" height="8" rx="4" fill="#7de9e3" opacity="0.35"/>
+    <rect x="170" y="324" width="130" height="8" rx="4" fill="#7de9e3" opacity="0.35"/>
+
+    <rect x="730" y="120" width="130" height="54" rx="12" fill="#151f2b"/>
+    <rect x="690" y="140" width="80" height="40" rx="10" fill="#243445"/>
+    <rect x="120" y="130" width="150" height="40" rx="12" fill="#202d3d"/>
+
+    <g transform="translate(510 352)">
+      <circle cx="0" cy="0" r="196" fill="url(#metalDark)"/>
+      <circle cx="0" cy="0" r="176" fill="#1b2b3a" stroke="#364e61" stroke-width="10"/>
+      <circle cx="0" cy="0" r="146" fill="url(#lensGlass)"/>
+      <circle cx="0" cy="0" r="116" fill="#0b1724" stroke="#4f738f" stroke-width="6"/>
+      <circle cx="0" cy="0" r="92" fill="url(#lensGlass)" opacity="0.8"/>
+      <ellipse cx="-34" cy="-48" rx="40" ry="24" fill="#b7fffa" opacity="0.26"/>
+      <ellipse cx="44" cy="56" rx="32" ry="18" fill="#6ab8ff" opacity="0.22"/>
+      <circle cx="0" cy="0" r="174" fill="none" stroke="#82deff" stroke-opacity="0.34" stroke-width="4"/>
+    </g>
+
+    <rect x="112" y="456" width="250" height="28" rx="14" fill="url(#accent)" opacity="0.7"/>
+    <rect x="390" y="456" width="90" height="28" rx="14" fill="#273948"/>
+    <rect x="602" y="456" width="90" height="28" rx="14" fill="#273948"/>
+    <rect x="716" y="456" width="90" height="28" rx="14" fill="#273948"/>
+
+    <rect x="328" y="64" width="320" height="74" rx="18" fill="#111926"/>
+    <rect x="358" y="84" width="220" height="12" rx="6" fill="#7cece5" opacity="0.34"/>
+    <rect x="358" y="106" width="180" height="10" rx="5" fill="#7cece5" opacity="0.28"/>
+  </g>
+
+  <g opacity="0.55">
+    <polygon points="410,220 490,220 880,1060 650,1060" fill="url(#floor)"/>
+    <polygon points="1490,240 1570,240 1890,1060 1710,1060" fill="url(#floor)"/>
+  </g>
+</svg>
