@@ -404,7 +404,7 @@ p {
   text-transform: uppercase;
 }
 
-.chapter-intro h2 {
+.chapter-intro :is(h1, h2) {
   margin: 8px 0 12px;
   font-size: clamp(30px, 4vw, 48px);
 }
