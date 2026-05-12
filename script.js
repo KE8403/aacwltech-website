@@ -1,12 +1,9 @@
 const header = document.querySelector("[data-header]");
 const menu = document.querySelector("[data-menu]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
-const workItems = Array.from(document.querySelectorAll(".work-item"));
-const workToggle = document.querySelector("[data-work-toggle]");
-const workInitialCount = 12;
 const pageTransitionMs = 200;
 const revealTargets = document.querySelectorAll(
-  ".section, .intro-band, .chapter-intro, .expertise-band, .service-card, .expertise-grid article, .logo-tile, .project-card, .work-item"
+  ".section, .intro-band, .chapter-intro, .expertise-band, .service-card, .expertise-grid article, .logo-tile, .project-card, .work-category, .work-item"
 );
 
 function updateHeader() {
@@ -64,30 +61,6 @@ if (menuToggle && menu && header) {
       menuToggle.setAttribute("aria-expanded", "false");
     }
   });
-}
-
-if (workItems.length > workInitialCount && workToggle) {
-  workItems.forEach((item, index) => {
-    if (index >= workInitialCount) {
-      item.classList.add("is-collapsed");
-    }
-  });
-
-  workToggle.addEventListener("click", () => {
-    const isExpanded = workToggle.getAttribute("aria-expanded") === "true";
-    const nextExpanded = !isExpanded;
-
-    workItems.forEach((item, index) => {
-      if (index >= workInitialCount) {
-        item.classList.toggle("is-collapsed", !nextExpanded);
-      }
-    });
-
-    workToggle.setAttribute("aria-expanded", String(nextExpanded));
-    workToggle.textContent = nextExpanded ? "Show less work" : "Show all work";
-  });
-} else if (workToggle) {
-  workToggle.style.display = "none";
 }
 
 function isPageTransitionLink(anchor, event) {
