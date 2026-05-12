@@ -1,8 +1,6 @@
 const header = document.querySelector("[data-header]");
 const menu = document.querySelector("[data-menu]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
-const contactForm = document.querySelector("[data-contact-form]");
-const formNote = document.querySelector("[data-form-note]");
 const workItems = Array.from(document.querySelectorAll(".work-item"));
 const workToggle = document.querySelector("[data-work-toggle]");
 const workInitialCount = 12;
@@ -90,21 +88,6 @@ if (workItems.length > workInitialCount && workToggle) {
   });
 } else if (workToggle) {
   workToggle.style.display = "none";
-}
-
-if (contactForm && formNote) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const data = new FormData(contactForm);
-    const name = String(data.get("name") || "").trim();
-    const email = String(data.get("email") || "").trim();
-    const message = String(data.get("message") || "").trim();
-    const subject = encodeURIComponent(`Project enquiry from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-
-    window.location.href = `mailto:aacwltech@gmail.com?subject=${subject}&body=${body}`;
-    formNote.textContent = "Your email app is ready with the message.";
-  });
 }
 
 function isPageTransitionLink(anchor, event) {
