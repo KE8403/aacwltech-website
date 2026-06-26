@@ -1,11 +1,21 @@
-category,website,contact_page,contact_email,target_page,target_anchor,status,notes,last_action_date
-Business Profile,Google Business Profile,https://www.google.com/business/,TBD,https://aacwltech.net/,media buying and PR agency in Malaysia,Pending,Create or optimize listing and add website URL,2026-05-12
-Business Directory,Malaysia Business Listing 01,TBD,TBD,https://aacwltech.net/media-buying-malaysia.html,media buying services Malaysia,Pending,Submit company profile and service page URL,2026-05-12
-Business Directory,Malaysia Business Listing 02,TBD,TBD,https://aacwltech.net/event-management-malaysia.html,event management services Malaysia,Pending,Submit with short company description,2026-05-12
-Industry Association,PR Association / Communications Body,TBD,TBD,https://aacwltech.net/strategic-communications-pr-malaysia.html,strategic communications and PR Malaysia,Pending,Request member profile backlink,2026-05-12
-Industry Association,Media Industry Association,TBD,TBD,https://aacwltech.net/media-intelligence-malaysia.html,media intelligence services Malaysia,Pending,Request supplier listing or partner page mention,2026-05-12
-Client Partner,Client Website Partner Mention 01,TBD,TBD,https://aacwltech.net/work.html,public campaign portfolio in Malaysia,Pending,Request project credit link from completed programme,2026-05-12
-Client Partner,Client Website Partner Mention 02,TBD,TBD,https://aacwltech.net/work.html,campaign execution portfolio,Pending,Use project-specific anchor text,2026-05-12
-Media Mention,Newsroom Interview / Feature,TBD,TBD,https://aacwltech.net/,AACWL TECH SDN BHD,Pending,Pitch expert comment on campaign analytics and media accountability,2026-05-12
-Education,University Communication Faculty,TBD,TBD,https://aacwltech.net/strategic-communications-pr-malaysia.html,strategic communications partner in Malaysia,Pending,Offer guest lecture and request resource page link,2026-05-12
-Government Ecosystem,Programme Collaboration Listing,TBD,TBD,https://aacwltech.net/work.html,media and event delivery portfolio,Pending,Request listing where collaboration is publicly documented,2026-05-12
+priority,target_name,target_url,target_type,contact_url,contact_email,suggested_link,anchor_text,status,date_added,date_contacted,follow_up_date,notes
+1,Google Business Profile,https://www.google.com/business/,business_profile,https://www.google.com/business/,,"https://aacwltech.net/","AACWL TECH SDN BHD",Pending,2026-05-13,,,High priority local visibility
+1,Bing Places for Business,https://www.bingplaces.com/,business_profile,https://www.bingplaces.com/,,"https://aacwltech.net/","AACWL TECH SDN BHD",Pending,2026-05-13,,,Important for Bing/AI surfaces
+1,LinkedIn Company Page,https://www.linkedin.com/,social_profile,https://www.linkedin.com/company/setup/new-company-page/,,"https://aacwltech.net/","AACWL TECH SDN BHD",Pending,2026-05-13,,,Add services and website backlinks
+1,Clutch,https://clutch.co/,agency_directory,https://clutch.co/firm/claim-profile,,"https://aacwltech.net/capabilities.html","Media Buying Services Malaysia",Pending,2026-05-13,,,Strong B2B citation
+1,DesignRush,https://www.designrush.com/,agency_directory,https://www.designrush.com/contact-us,,"https://aacwltech.net/capabilities.html","Strategic Communications Malaysia",Pending,2026-05-13,,,Submit agency profile
+2,Hotfrog Malaysia,https://www.hotfrog.com.my/,business_directory,https://www.hotfrog.com.my/add-your-business,,"https://aacwltech.net/","AACWL TECH SDN BHD",Pending,2026-05-13,,,General directory
+2,BusinessList Malaysia,https://www.businesslist.my/,business_directory,https://www.businesslist.my/add-business,,"https://aacwltech.net/work.html","Campaign Execution Portfolio",Pending,2026-05-13,,,Local listing
+2,The Pages Malaysia,https://www.thepages.com.my/,business_directory,https://www.thepages.com.my/contact_us,,"https://aacwltech.net/","AACWL TECH SDN BHD",Pending,2026-05-13,,,Directory citation
+2,SBOok Malaysia,https://www.sbook.my/,business_directory,https://www.sbook.my/register,,"https://aacwltech.net/","AACWL TECH SDN BHD",Pending,2026-05-13,,,Business listing
+2,Malaysia SME Directory,https://www.malaysiasmedirectory.com/,business_directory,https://www.malaysiasmedirectory.com/contact,,"https://aacwltech.net/capabilities.html","Media Intelligence Services Malaysia",Pending,2026-05-13,,,SME-focused visibility
+2,BizInfo Malaysia,https://www.bizinfo.my/,business_directory,https://www.bizinfo.my/,,"https://aacwltech.net/","AACWL TECH SDN BHD",Pending,2026-05-13,,,Check listing flow
+2,MYSBusiness,https://mysbusiness.com/,business_directory,https://mysbusiness.com/contact,,"https://aacwltech.net/","AACWL TECH SDN BHD",Pending,2026-05-13,,,Directory inclusion
+2,CTOS BizFinder,https://bizfinder.ctoscredit.com.my/,business_directory,https://bizfinder.ctoscredit.com.my/,,"https://aacwltech.net/","AACWL TECH SDN BHD",Pending,2026-05-13,,,Trust signal listing
+3,PIKOM (Membership/Listing),https://www.pikom.org.my/,industry_association,https://www.pikom.org.my/contact-us/,,"https://aacwltech.net/","AACWL TECH SDN BHD",Pending,2026-05-13,,,Industry body relevance
+3,Malaysian Advertisers Association,https://www.maa.org.my/,industry_association,https://www.maa.org.my/contact-us/,,"https://aacwltech.net/media-buying-malaysia.html","Media Buying Services Malaysia",Pending,2026-05-13,,,Media ecosystem relevance
+3,British Malaysian Chamber of Commerce,https://www.bmcc.org.my/,chamber_listing,https://www.bmcc.org.my/contact/,,"https://aacwltech.net/","AACWL TECH SDN BHD",Pending,2026-05-13,,,Business network citation
+3,Foursquare Listing,https://foursquare.com/,business_profile,https://business.foursquare.com/,,"https://aacwltech.net/","AACWL TECH SDN BHD",Pending,2026-05-13,,,Location citation
+3,Apple Business Connect,https://businessconnect.apple.com/,business_profile,https://businessconnect.apple.com/,,"https://aacwltech.net/","AACWL TECH SDN BHD",Pending,2026-05-13,,,Apple Maps presence
+3,PR Submission (VRITIMES),https://www.vritimes.com/,press_release,https://www.vritimes.com/contact,,"https://aacwltech.net/work.html","Campaign Execution Portfolio",Pending,2026-05-13,,,Announcement + brand mention
+3,Medium Publication Profile,https://medium.com/,content_platform,https://medium.com/,,"https://aacwltech.net/capabilities.html","Strategic Communications And PR Malaysia",Pending,2026-05-13,,,Publish thought-leadership article
